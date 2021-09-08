@@ -1,0 +1,43 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 120px;
+  height: 150px;
+  margin: 10px;
+
+  padding: 8px;
+  border: 1px dashed gray;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.productCard > h4 {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.productCard > p {
+  margin: 5px 10px;
+}
+
+button {
+  color: #fff;
+  background-color: #0096c7;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  width: 100px;
+  height: 35px;
+}
+
+.productCard > button {
+  margin-left: 10px;
+}
+
+button:hover {
+  color: #0096c7;
+  background-color: #fff;
+  border: 1px solid #0096c7;
+  cursor: pointer;
+}
