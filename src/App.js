@@ -22,9 +22,9 @@ function App() {
   const showProducts = (filteredText) => {
     if (filteredText !== '') {
       const filtered = products.filter((item) => {
-        if (item.name === filteredText) {
+        if (item.name.toLowerCase() === filteredText.toLowerCase()) {
           return item;
-        } else if (item.category === filteredText) {
+        } else if (item.category.toLowerCase() === filteredText.toLowerCase()) {
           return item;
         }
       });
@@ -78,7 +78,9 @@ function App() {
 
             <h5>
               Total a pagar:{' '}
-              {currentSale.reduce((total, current) => current.price + total, 0)}
+              {currentSale
+                .reduce((total, current) => current.price + total, 0)
+                .toFixed(2)}
             </h5>
 
             <div className="shoppingCart__itemsList">
@@ -119,7 +121,9 @@ function App() {
 
             <h5>
               Total a pagar:{' '}
-              {currentSale.reduce((total, current) => current.price + total, 0)}
+              {currentSale
+                .reduce((total, current) => current.price + total, 0)
+                .toFixed(2)}
             </h5>
 
             <div className="App-cart__itemsList">
